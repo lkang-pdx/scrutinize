@@ -11,9 +11,12 @@
 
   <body>
     <div class="container">
-      <ul class="nav nav-tabs">
-        <li><%= link_to "Home", welcome_index_path %></li>
+      <ul class="nav nav-pills">
+        <li class="active"><%= link_to "Home", welcome_index_path %></li>
         <li><%= link_to "About", welcome_about_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "My Apps", user_path(current_user) %></li>
+        <% end %>
         <div class="pull-right user-info">
           <% if user_signed_in? %>
             Signed in as: <strong><%= current_user.email %></strong> |

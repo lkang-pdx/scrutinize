@@ -24,3 +24,5 @@
 /config/application.yml
 /coverage/*
 /coverage
+/.idea/*
+/.idea

@@ -17,7 +17,7 @@ class RegisteredApplicationsController < ApplicationController
 
     if @registered_app.save
       flash[:notice] = "Wiki was saved."
-      redirect_to @registered_app
+      redirect_to [current_user, @registered_app]
     else
       flash.now[:alert] = "There was an error saving the app. Please try again."
       render :new
@@ -35,7 +35,7 @@ class RegisteredApplicationsController < ApplicationController
 
     if @registered_app.save
       flash[:notice] = "App was updated."
-      redirect_to @registered_app
+      redirect_to [current_user, @registered_app]
     else
       flash.now[:alert] = "There was an error saving the app. Please try again."
       render :edit
@@ -56,6 +56,6 @@ class RegisteredApplicationsController < ApplicationController
 
   private
   def app_params
-    params.require(:registered_app).permit(:name, :url)
+    params.require(:registered_application).permit(:name, :url)
   end
 end

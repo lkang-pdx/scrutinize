@@ -1,0 +1,6 @@
+<tbody>
+  <%= content_tag :tr, class: "info", id: "registered_application-#{registered_application.id}" do %>
+    <td><%= registered_application.name %></td>
+    <td><%= link_to "", [current_user, registered_application], method: :delete, class: 'glyphicon glyphicon-ok' %></td>
+  <% end %>
+</tbody>
