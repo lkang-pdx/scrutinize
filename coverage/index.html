@@ -14,18 +14,18 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-01-09T15:03:36-08:00">2017-01-09T15:03:36-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-01-10T11:21:38-08:00">2017-01-10T11:21:38-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">96.31%</span></span>
+    (<span class="covered_percent"><span class="green">92.17%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.49
+         1.43
        </span>
     </span> hits/line)
   </h2>
@@ -33,8 +33,8 @@
   <div>
     <b>30</b> files in total.
     <b>217</b> relevant lines. 
-    <span class="green"><b>209</b> lines covered</span> and
-    <span class="red"><b>8</b> lines missed </span>
+    <span class="green"><b>200</b> lines covered</span> and
+    <span class="red"><b>17</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#2184d569af800d57bb21eb1fe807ead15e505bbe" class="src_link" title="app/controllers/registered_applications_controller.rb">app/controllers/registered_applications_controller.rb</a></td>
-        <td class="yellow strong">83.33 %</td>
+        <td class="red strong">72.22 %</td>
         <td>61</td>
         <td>36</td>
-        <td>30</td>
-        <td>6</td>
-        <td>1.5</td>
+        <td>26</td>
+        <td>10</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -302,12 +302,12 @@
       
       <tr>
         <td class="strong"><a href="#09803565e9dc1ce222fb84f7bb6e041c80a12b7e" class="src_link" title="spec/controllers/registered_applications_controller_spec.rb">spec/controllers/registered_applications_controller_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="green strong">92.19 %</td>
         <td>107</td>
         <td>64</td>
-        <td>64</td>
-        <td>0</td>
-        <td>1.6</td>
+        <td>59</td>
+        <td>5</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
@@ -411,11 +411,11 @@
         <div class="source_table" id="2184d569af800d57bb21eb1fe807ead15e505bbe">
   <div class="header">
     <h3>app/controllers/registered_applications_controller.rb</h3>
-    <h4><span class="yellow">83.33 %</span> covered</h4>
+    <h4><span class="red">72.22 %</span> covered</h4>
     <div>
       <b>36</b> relevant lines. 
-      <span class="green"><b>30</b> lines covered</span> and
-      <span class="red"><b>6</b> lines missed.</span>
+      <span class="green"><b>26</b> lines covered</span> and
+      <span class="red"><b>10</b> lines missed.</span>
     </div>
   </div>
   
@@ -533,7 +533,7 @@
         <li class="covered" data-hits="3" data-linenumber="19">
           <span class="hits">3</span>
           
-          <code class="ruby">      flash[:notice] = &quot;Wiki was saved.&quot;</code>
+          <code class="ruby">      flash[:notice] = &quot;App was saved.&quot;</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="20">
@@ -617,13 +617,13 @@
         <li class="covered" data-hits="2" data-linenumber="33">
           <span class="hits">2</span>
           
-          <code class="ruby">    @registered_app.name = params[:registered_app][:name]</code>
+          <code class="ruby">    @registered_app.name = params[:registered_application][:name]</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="34">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="34">
           
-          <code class="ruby">    @registered_app.url = params[:registered_app][:url]</code>
+          
+          <code class="ruby">    @registered_app.url = params[:registered_application][:url]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
@@ -632,20 +632,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="36">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="36">
+          
           
           <code class="ruby">    if @registered_app.save</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="37">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
           
           <code class="ruby">      flash[:notice] = &quot;App was updated.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="38">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="38">
+          
           
           <code class="ruby">      redirect_to [current_user, @registered_app]</code>
         </li>
@@ -4185,11 +4185,11 @@
         <div class="source_table" id="09803565e9dc1ce222fb84f7bb6e041c80a12b7e">
   <div class="header">
     <h3>spec/controllers/registered_applications_controller_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="green">92.19 %</span> covered</h4>
     <div>
       <b>64</b> relevant lines. 
-      <span class="green"><b>64</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="green"><b>59</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -4403,7 +4403,7 @@
         <li class="covered" data-hits="2" data-linenumber="35">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect{post :create, user_id: user.id, registered_application: attributes_for(:registered_application) }.to change(RegisteredApplication,:count).by(1)</code>
+          <code class="ruby">      expect{post :create, params: {user_id: user.id, registered_application: attributes_for(:registered_application) }}.to change(RegisteredApplication,:count).by(1)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
@@ -4457,7 +4457,7 @@
         <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
-          <code class="ruby">      post :create, user_id: user.id, registered_application: {name: registered_application.name, url: registered_application.url}</code>
+          <code class="ruby">      post :create, params: {user_id: user.id, registered_application: {name: registered_application.name, url: registered_application.url}}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="45">
@@ -4661,7 +4661,7 @@
         <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
-          <code class="ruby">      put :update, user_id: user.id, id: registered_application2.id, registered_app: {name: new_name, url: new_url}</code>
+          <code class="ruby">      put :update, params: { user_id: user.id, id: registered_application2.id, registered_app: {name: new_name, url: new_url} }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="79">
@@ -4670,26 +4670,26 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="80">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="80">
+          
           
           <code class="ruby">      updated_app = assigns(:registered_app)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="81">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="81">
+          
           
           <code class="ruby">      expect(updated_app.id).to eq registered_application2.id</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="82">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="82">
+          
           
           <code class="ruby">      expect(updated_app.name).to eq new_name</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="83">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="83">
+          
           
           <code class="ruby">      expect(updated_app.url).to eq new_url</code>
         </li>
@@ -4733,11 +4733,11 @@
         <li class="covered" data-hits="1" data-linenumber="90">
           <span class="hits">1</span>
           
-          <code class="ruby">      put :update, user_id: user.id, id: registered_application2.id, registered_app: {name: new_name, url: new_url}</code>
+          <code class="ruby">      put :update, params: { user_id: user.id, id: registered_application2.id, registered_app: {name: new_name, url: new_url} }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="91">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="91">
+          
           
           <code class="ruby">      expect(response).to redirect_to user_registered_application_path(id: registered_application2.id)</code>
         </li>

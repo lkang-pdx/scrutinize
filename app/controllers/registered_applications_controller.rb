@@ -16,7 +16,7 @@ class RegisteredApplicationsController < ApplicationController
     @registered_app.user = current_user
 
     if @registered_app.save
-      flash[:notice] = "Wiki was saved."
+      flash[:notice] = "App was saved."
       redirect_to [current_user, @registered_app]
     else
       flash.now[:alert] = "There was an error saving the app. Please try again."
@@ -30,8 +30,8 @@ class RegisteredApplicationsController < ApplicationController
 
   def update
     @registered_app = RegisteredApplication.find(params[:id])
-    @registered_app.name = params[:registered_app][:name]
-    @registered_app.url = params[:registered_app][:url]
+    @registered_app.name = params[:registered_application][:name]
+    @registered_app.url = params[:registered_application][:url]
 
     if @registered_app.save
       flash[:notice] = "App was updated."

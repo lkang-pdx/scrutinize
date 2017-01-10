@@ -32,7 +32,7 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
 
   describe "POST create" do
     it "increases the number of RegisteredApplication by 1" do
-      expect{post :create, user_id: user.id, registered_application: attributes_for(:registered_application) }.to change(RegisteredApplication,:count).by(1)
+      expect{post :create, params: {user_id: user.id, registered_application: attributes_for(:registered_application) }}.to change(RegisteredApplication,:count).by(1)
     end
 
     it "assigns the new registered_app to @registered_app" do
@@ -41,7 +41,7 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
     end
 
     it "redirects to the new registered_app" do
-      post :create, user_id: user.id, registered_application: {name: registered_application.name, url: registered_application.url}
+      post :create, params: {user_id: user.id, registered_application: {name: registered_application.name, url: registered_application.url}}
       expect(response).to redirect_to user_registered_application_path(id: RegisteredApplication.last.id)
     end
   end
@@ -75,7 +75,7 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
       new_name = registered_application2.name
       new_url = registered_application2.url
 
-      put :update, user_id: user.id, id: registered_application2.id, registered_app: {name: new_name, url: new_url}
+      put :update, params: { user_id: user.id, id: registered_application2.id, registered_app: {name: new_name, url: new_url} }
 
       updated_app = assigns(:registered_app)
       expect(updated_app.id).to eq registered_application2.id
@@ -87,7 +87,7 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
       new_name = registered_application2.name
       new_url = registered_application2.url
 
-      put :update, user_id: user.id, id: registered_application2.id, registered_app: {name: new_name, url: new_url}
+      put :update, params: { user_id: user.id, id: registered_application2.id, registered_app: {name: new_name, url: new_url} }
       expect(response).to redirect_to user_registered_application_path(id: registered_application2.id)
     end
   end
