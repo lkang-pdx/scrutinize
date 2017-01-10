@@ -1,18 +1,13 @@
-<h1>All Registered Applications</h1>
-
+<h2>Registered Apps for <%= current_user.email %></h2>
 <div class="row">
   <div class="col-md-8">
-    <% @registered_apps.each do |app| %>
-      <div class="media">
-        <div class="media-body">
-          <h4 class="media-heading">
-            <%= render 'registered_applications/registered_app', registered_application: app %>
-          </h4>
-        </div>
+    <div class="media">
+      <div class="media-body">
+        <%= link_to "New App", new_user_registered_application_path, class: 'btn btn-info' %>
+        <% current_user.registered_applications.each do |app| %>
+          <%= render 'registered_applications/registered_app', registered_application: app %>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-  <div>
-    <%= link_to "New App", new_user_registered_application_path, class: 'btn btn-info' %>
+    </div>
   </div>
 </div>

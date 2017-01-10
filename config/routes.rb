@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :users, only: [:show] do
+  resources :users do
     resources :registered_applications
   end
 

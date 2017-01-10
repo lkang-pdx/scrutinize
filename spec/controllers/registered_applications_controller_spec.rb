@@ -75,7 +75,7 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
       new_name = registered_application2.name
       new_url = registered_application2.url
 
-      put :update, params: { user_id: user.id, id: registered_application2.id, registered_app: {name: new_name, url: new_url} }
+      put :update, params: { user_id: user.id, id: registered_application2.id, registered_application: {name: new_name, url: new_url} }
 
       updated_app = assigns(:registered_app)
       expect(updated_app.id).to eq registered_application2.id
@@ -87,7 +87,7 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
       new_name = registered_application2.name
       new_url = registered_application2.url
 
-      put :update, params: { user_id: user.id, id: registered_application2.id, registered_app: {name: new_name, url: new_url} }
+      put :update, params: { user_id: user.id, id: registered_application2.id, registered_application: {name: new_name, url: new_url} }
       expect(response).to redirect_to user_registered_application_path(id: registered_application2.id)
     end
   end

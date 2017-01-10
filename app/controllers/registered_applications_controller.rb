@@ -30,8 +30,7 @@ class RegisteredApplicationsController < ApplicationController
 
   def update
     @registered_app = RegisteredApplication.find(params[:id])
-    @registered_app.name = params[:registered_application][:name]
-    @registered_app.url = params[:registered_application][:url]
+    @registered_app.assign_attributes(app_params)
 
     if @registered_app.save
       flash[:notice] = "App was updated."

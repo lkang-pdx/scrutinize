@@ -1,7 +1,5 @@
 <div class="row">
   <div class="col-md-8">
-    <h5><%= link_to registered_application.name, user_registered_application_path(registered_application.user.id, registered_application.id) %></h5>
-    <h6><%= registered_application.url %></h6>
-    <%= link_to "", [current_user, registered_application], method: :delete, class: 'glyphicon glyphicon-ok' %>
+    <h5><%= link_to registered_application.name, user_registered_application_path(registered_application.user.id, registered_application.id) %><br><%= registered_application.url %></h5>
   </div>
 </div>
