@@ -1,0 +1,13 @@
+<h2>Registered Apps for <%= current_user.email %></h2>
+<div class="row">
+  <div class="col-md-8">
+    <div class="media">
+      <div class="media-body">
+        <%= link_to "New App", new_user_registered_application_path, class: 'btn btn-info' %>
+        <% current_user.registered_applications.each do |app| %>
+          <%= render 'registered_applications/registered_app', registered_application: app %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
