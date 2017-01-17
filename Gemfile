@@ -5,7 +5,6 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 
 # #1
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
@@ -15,7 +14,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'sqlite3'
   gem 'listen'
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -49,3 +47,9 @@ gem 'figaro', '1.0'
 gem 'bootswatch-rails'
 
 gem 'rack-cors', :require => 'rack/cors'
+
+gem 'chartkick'
+
+gem 'groupdate'
+
+gem 'pg'

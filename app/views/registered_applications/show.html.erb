@@ -1,16 +1,20 @@
-<h2><%= @registered_app.name %></h2>
 <div class="row">
-  <div class="col-md-8">
-    <h4><%= @registered_app.url %></h4>
-  </div>
-  <div class="col-md-8">
-    <h5>Total Unique Events: <%= @registered_app.events.group_by(&:name).count%></h5>
-    <% @registered_app.events.each do |event| %>
-      <p>Event name: <%= event.name %></p>
-    <% end %>
-  </div>
   <div class="col-md-4">
+    <h2><%= @registered_app.name %></h2>
+    <h4><%= @registered_app.url %></h4>
     <%= link_to "Edit App", edit_user_registered_application_path(current_user, @registered_app), class: 'btn btn-success' %>
     <%= link_to "Delete App", [current_user, @registered_app], method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this app?'} %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <h3>Events:</h3>
+    <% @registered_app.events.each do |event| %>
+      <p><%= event.name %></p>
+    <% end %>
+  </div>
+  <div class="col-md-8">
+    <%= pie_chart @registered_app.events.group(:name).count %>
+    <%= line_chart @registered_app.events.group_by_day(:created_at).count %>
   </div>
 </div>

@@ -1,7 +1,7 @@
 # Scrutinize
 #### Written in Ruby, JavaScript, HTML & CSS.
 
-You can checkout Scrutinize [here][https://tranquil-sands-50425.herokuapp.com/]. Check out this analytics service to track events on your registered websites.
+You can checkout Scrutinize [here](https://tranquil-sands-50425.herokuapp.com/). Check out this analytics service to track events on your registered websites.
 
 ###Features:
 
@@ -11,9 +11,9 @@ You can checkout Scrutinize [here][https://tranquil-sands-50425.herokuapp.com/].
 
 ###Getting Started:
 
-1. Sign up and register your website on [Scrutinize][https://tranquil-sands-50425.herokuapp.com/].
+* Sign up and register your website on [Scrutinize](https://tranquil-sands-50425.herokuapp.com/).
 
-2. Add the following JavaScript snippet to the `application.js` file on your website:
+* Add the following JavaScript snippet to the `application.js` file on your website:
 
 ```
 var scrutinize = {};
@@ -28,8 +28,8 @@ var scrutinize = {};
 
     request.send(JSON.stringify(event));
   };
-  ```
-3. Add the `scrutinize.report` function to the bottom of the desired page. For example, the script below was inserted at the bottom of the About Page.
+```
+* Add the `scrutinize.report` function to the bottom of the desired page. For example, the script below was inserted at the bottom of the About Page.
 
 ```
 <script type="text/javascript">
