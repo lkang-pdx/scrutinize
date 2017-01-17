@@ -47,3 +47,5 @@ gem 'devise'
 gem 'figaro', '1.0'
 
 gem 'bootswatch-rails'
+
+gem 'rack-cors', :require => 'rack/cors'
