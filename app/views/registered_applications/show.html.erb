@@ -7,14 +7,16 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
-    <h3>Events:</h3>
-    <% @registered_app.events.each do |event| %>
-      <p><%= event.name %></p>
-    <% end %>
-  </div>
-  <div class="col-md-8">
+  <div class="col-md-12">
     <%= pie_chart @registered_app.events.group(:name).count %>
     <%= line_chart @registered_app.events.group_by_day(:created_at).count %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h3>Events Log:</h3>
+    <% @registered_app.events.each do |event| %>
+      <p><%= event.name %>: <%= event.created_at %></p>
+    <% end %>
   </div>
 </div>
