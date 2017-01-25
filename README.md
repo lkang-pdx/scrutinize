@@ -39,3 +39,5 @@ var scrutinize = {};
 </script>
 ```
 That's it! Scrutinize will then track the events from your registered website.
+
+![Screenshot](app/assets/images/Scrutinize.png)
