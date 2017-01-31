@@ -1,4 +1,5 @@
 # Scrutinize
+[![Code Climate](https://codeclimate.com/repos/588fecfe03e89e1553004f2a/badges/673cffcfcb5767980e05/gpa.svg)](https://codeclimate.com/repos/588fecfe03e89e1553004f2a/feed)
 #### Written in Ruby, JavaScript, HTML & CSS.
 
 You can checkout Scrutinize [here](https://tranquil-sands-50425.herokuapp.com/). Check out this analytics service to track events on your registered websites.
