@@ -1,0 +1,40 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Scrutinize
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .container
+      %ul.nav.nav-pills
+        %li.active= link_to "Scrutinize", welcome_index_path
+        %li= link_to "About", welcome_about_path
+        - if user_signed_in?
+          %li= link_to "My Apps", user_registered_applications_path(current_user)
+        .pull-right.user-info
+          - if user_signed_in?
+            Signed in as:
+            %strong= current_user.email
+            |
+            \#{link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'} - #{link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'}
+          - else
+            = link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'
+            \-
+            \#{link_to "Sign In", new_user_session_path, :class => 'navbar-link'}
+    - if flash[:notice]
+      .alert.alert-success
+        %button.close{"data-dismiss" => "alert", :type => "button"} ×
+        = flash[:notice]
+    - elsif flash.now[:alert]
+      .alert.alert-danger
+        %button.close{"data-dismiss" => "alert", :type => "button"} ×
+        = flash.now[:alert]
+    - elsif flash[:alert]
+      .alert.alert-warning
+        %button.close{"data-dismiss" => "alert", :type => "button"} ×
+        = flash[:alert]
+    .container
+      = yield

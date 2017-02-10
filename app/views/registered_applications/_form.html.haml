@@ -1,0 +1,10 @@
+.col-md-8
+  = form_for [user, registered_app] do |f|
+    .form-group
+      = f.label :name
+      = f.text_field :name, class: 'form-control', placeholder: "Enter app name"
+    .form-group
+      = f.label :url
+      = f.text_field :url, class: 'form-control', placeholder: "Enter app url"
+    .form-group
+      = f.submit "Save", class: 'btn btn-success'

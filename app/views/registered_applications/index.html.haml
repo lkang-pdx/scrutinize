@@ -1,0 +1,9 @@
+%h2
+  Registered Apps for #{current_user.email}
+.row
+  .col-md-8
+    .media
+      .media-body
+        - current_user.registered_applications.each do |app|
+          = render 'registered_applications/registered_app', registered_application: app
+        = link_to "Register New App", new_user_registered_application_path, class: 'btn btn-info'

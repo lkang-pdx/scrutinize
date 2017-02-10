@@ -1,6 +1,6 @@
 # Scrutinize
 [![Code Climate](https://codeclimate.com/repos/588fecfe03e89e1553004f2a/badges/673cffcfcb5767980e05/gpa.svg)](https://codeclimate.com/repos/588fecfe03e89e1553004f2a/feed)
-#### Written in Ruby, JavaScript, HTML & CSS.
+#### Written in Ruby, JavaScript, Haml & CSS.
 
 You can checkout Scrutinize [here](https://tranquil-sands-50425.herokuapp.com/). Check out this analytics service to track events on your registered websites.
 
@@ -41,4 +41,5 @@ var scrutinize = {};
 ```
 That's it! Scrutinize will then track the events from your registered website.
 
+![Home Screenshot](app/assets/images/Home.png)
 ![Screenshot](app/assets/images/Scrutinize.png)

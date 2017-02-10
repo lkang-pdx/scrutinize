@@ -17,7 +17,7 @@
  // @import "bootstrap";
 
   // Import cerulean variables
- @import "bootswatch/cosmo/variables";
+ @import "bootswatch/yeti/variables";
 
  // Then bootstrap itself
  @import "bootstrap";
@@ -26,7 +26,7 @@
  body { padding-top: 60px; }
 
  // And finally bootswatch style itself
- @import "bootswatch/cosmo/bootswatch";
+ @import "bootswatch/yeti/bootswatch";
 
  .user-info {
    margin-top: 9px;
@@ -39,3 +39,81 @@
  .table-font {
    font-size: 20px;
  }
+
+ #banner {
+	background-image: url(image_path("splash.jpg"));
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	width: 100%;
+	min-height: 600px;
+	display: table;
+	.banner_content {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		h1 {
+      top: 40%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 100%;
+      text-align: center;
+      font-size: 5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      text-shadow: 2px 2px 1px rgb(58,23,63);
+      color: white;
+		}
+		p {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      text-shadow: 1px 1px 0px rgb(58,23,63);
+		}
+	}
+}
+
+.selling-points {
+    position: relative;
+    background-color: #328CC1;
+    width: 100%;
+}
+
+.point {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 0px rgb(58,23,63);
+}
+
+.point .point-title {
+    font-size: 1.5rem;
+}
+
+.point-title {
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 1px 1px 0px rgb(58,23,63);
+}
+
+@media (min-width: 640px){
+    html { font-size: 100%; }
+
+    .column{
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .column.full { width: 100px; }
+    .column.two-thirds { width: 66.7%; }
+    .column.half { width: 50%; }
+    .column.third { width: 33.3%; }
+    .column.fourth { width: 25%; }
+    .column.flow-opposite { float: right; }
+}
