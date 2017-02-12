@@ -12,7 +12,7 @@ You can checkout Scrutinize [here](https://tranquil-sands-50425.herokuapp.com/).
 
 ###Getting Started:
 
-* Sign up and register your website on [Scrutinize](https://tranquil-sands-50425.herokuapp.com/).
+* Sign up and register your website on [Scrutinize](http://tranquil-sands-50425.herokuapp.com/).
 
 * Add the following JavaScript snippet to the `application.js` file on your website:
 
