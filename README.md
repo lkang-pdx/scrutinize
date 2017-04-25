@@ -4,13 +4,13 @@
 
 You can checkout Scrutinize [here](https://tranquil-sands-50425.herokuapp.com/). Check out this analytics service to track events on your registered websites.
 
-###Features:
+### Features:
 
 * A client-side JavaScript snippet that allows a user to track events on their website.
 * A server-side API that captures and saves those events to a database.
 * A Rails 5 application that displays the captured event data for a user.
 
-###Getting Started:
+### Getting Started:
 
 * Sign up and register your website on [Scrutinize](https://tranquil-sands-50425.herokuapp.com/).
 
